@@ -38,7 +38,8 @@ module.exports.routes = {
   'get /user': 'UserController.get',
   'get /test': 'TestController.get',
   'post /user': 'UserController.post',
-  'post /user/contacts': 'UserController.updateContactList'
+  'post /user/contacts': 'UserController.updateContactList',
+  'post /user/dummy': 'UserController.dummy'
 
   /***************************************************************************
   *                                                                          *

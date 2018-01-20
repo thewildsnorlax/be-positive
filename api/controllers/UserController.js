@@ -16,6 +16,11 @@ module.exports = {
 		return res.ok('everything is good');
 	},
 
+	dummy: function (req, res) {
+		sails.log.info('inside post');
+		return res.ok('mast chal raha hai be');
+	},
+
 	post: function (req, res) {
 
 		const body = req.body;
@@ -34,19 +39,30 @@ module.exports = {
 			lng: null
 		}
 
-		//find lat lng here
+		MapService.geoCode(user_object.address, user_object.pincode, function (error, location) {
 
-		User
-		.create(user_object)
-		.exec(function (error, userRecord) {
-			
 			if(error) {
 				sails.log.error(error);
 				return res.serverError();
 			}
 
-			return res.created(userRecord);
+			user_object.lat = location.lat;
+			user_object.lng = location.lng;
+
+			User
+			.create(user_object)
+			.exec(function (error, userRecord) {
+				
+				if(error) {
+					sails.log.error(error);
+					return res.serverError();
+				}
+
+				return res.created(userRecord);
+			});	
 		});
+
+
 	},
 
 	updateContactList: function (req, res) {
@@ -67,8 +83,6 @@ module.exports = {
 				return res.serverError();
 			}
 
-			console.log(contactRecords);
-
 			User
 			.update({id: userId}, {contact_list: contactRecords})
 			.exec(function (error, userRecord) {
@@ -83,7 +97,23 @@ module.exports = {
 		
 	},
 
+	/*getStatus: function (req, res) {
 
+		const userId = req.query.id;
+
+		request
+		.find({user: userId})
+		.populate('donor_list')
+		.exec(function (error, requestRecords) {
+
+			if(error) {
+				sails.log.error('error');
+				return res.serverError();
+			}
+
+			if()
+		});
+	}*/
 };
 
 /*
