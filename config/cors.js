@@ -28,6 +28,10 @@
 
 module.exports.cors = {
 
+  allRoutes: true,
+  origin: '*',
+  credentials: false
+
   /***************************************************************************
   *                                                                          *
   * Allow CORS on all routes by default? If not, you must enable CORS on a   *
@@ -37,7 +41,7 @@ module.exports.cors = {
   *                                                                          *
   ***************************************************************************/
 
-  // allRoutes: false,
+  // allRoutes: true
 
   /***************************************************************************
   *                                                                          *
