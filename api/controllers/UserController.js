@@ -97,7 +97,7 @@ module.exports = {
 		
 	},
 
-	/*getStatus: function (req, res) {
+	getStatus: function (req, res) {
 
 		const userId = req.query.id;
 
@@ -111,9 +111,15 @@ module.exports = {
 				return res.serverError();
 			}
 
-			if()
+			if(requestRecords.length == 0) {
+				sails.log.info('you have made no requests yet!');
+				return response.ok([]);
+			}
+
+			
+
 		});
-	}*/
+	}
 };
 
 /*
