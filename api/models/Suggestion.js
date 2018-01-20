@@ -23,7 +23,7 @@ module.exports = {
 
 		time: {
 			type: 'string'
-		}
+		},
 
 		linked_request: {
 			model: 'Request',
@@ -34,7 +34,6 @@ module.exports = {
 			type: 'string',
 			enum: ['sent', 'accepted', 'denied'],
 			defaultsTo: 'sent'
-		},
-		
+		}
 	}  
 };

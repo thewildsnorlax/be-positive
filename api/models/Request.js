@@ -16,7 +16,7 @@ module.exports = {
 		hospital_name: {
 			type: 'string',
 			required: true
-		}
+		},
 
 		hospital_address: { 
 		    type: 'text',
