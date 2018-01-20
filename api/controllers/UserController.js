@@ -10,6 +10,10 @@ module.exports = {
 	get: function (req, res) {
 		sails.log.info('inside get');
 		return res.ok('everything is good');
+	},
+
+	post: function (req, res) {
+
 	}
 };
 

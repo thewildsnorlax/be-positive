@@ -44,6 +44,14 @@ module.exports = {
 		contact_list: {
 			collection: 'Contact',
   			via: 'linked_users'
+		},
+
+		latitute: {
+			type: 'float'
+		},
+
+		longitude: {
+			type: 'float'
 		}
 	}  
 };

@@ -8,11 +8,6 @@ module.exports = {
 		      autoIncrement: true
 		},
 
-		owner: {
-			model: 'User',
-			required: true
-		},
-
 		mobile: {
 			type: 'string',
 			required: true
