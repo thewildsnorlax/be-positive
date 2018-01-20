@@ -84,5 +84,23 @@ module.exports = {
 		});
 	},
 
-	
+	updateStatus: function (req, res) {
+
+		let id = req.body.id;
+		let status = req.body.status;
+
+		Suggestion
+		.update({id: id}, {status: status})
+		.exec(function (error, record) {
+
+			if(error) {
+				sails.log.error(error);
+				return res.serverError();
+			}
+
+			return res.ok(record);
+		});
+	}
+
+
 };

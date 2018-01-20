@@ -42,7 +42,8 @@ module.exports.routes = {
   'post /user/dummy': 'UserController.dummy',
   'post /user/makerequest': 'UserController.makeRequest',
   'get /request/status': 'UserController.getStatus',
-  'get /notifications': 'SuggestionController.getNotification'
+  'get /notifications': 'SuggestionController.getNotification',
+  'post /status/update': 'SuggestionController.updateStatus',
 
   /***************************************************************************
   *                                                                          *
