@@ -29,7 +29,7 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
 
-	//migrate : 'safe',
-	migrate : 'alter'
+	migrate : 'safe',
+	//migrate : 'alter'
 
 };

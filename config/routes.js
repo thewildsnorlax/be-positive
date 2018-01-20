@@ -36,6 +36,8 @@ module.exports.routes = {
     view: 'homepage'
   },
   'get /user': 'UserController.get',
+  'post /user': 'UserController.post',
+  'post /user/contacts': 'UserController.updateContactList',
 
   /***************************************************************************
   *                                                                          *
