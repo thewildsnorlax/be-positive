@@ -20,6 +20,8 @@ module.exports = {
 
 		const body = req.body;
 
+		//change the date format to yyyy/mm/dd
+
 		let user_object = {
 			name: body.name,
 			password: body.password,
@@ -79,7 +81,9 @@ module.exports = {
 			});
 		});
 		
-	}
+	},
+
+
 };
 
 /*
