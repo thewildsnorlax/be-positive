@@ -25,6 +25,14 @@ module.exports = {
 			type: 'string'
 		},
 
+		distance_value: {
+			type: 'float'
+		},
+
+		time_value: {
+			type: 'float'
+		},
+
 		linked_request: {
 			model: 'Request',
 			required: true
