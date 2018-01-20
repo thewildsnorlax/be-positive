@@ -32,6 +32,14 @@ module.exports.connections = {
     adapter: 'sails-disk'
   },
 
+    MysqlServer: {
+    adapter: 'sails-mysql',
+    host: 'kapitalwise.ccxntn2m2ut3.us-east-1.rds.amazonaws.com', 
+    user: 'kapitalwise', 
+    password: 'Kap1talW1se',
+    database: 'database.azure.com'
+  },
+
   /***************************************************************************
   *                                                                          *
   * MySQL is the world's most popular relational database.                   *

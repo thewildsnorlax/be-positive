@@ -27,9 +27,14 @@ module.exports = {
 			required: true
 		},
 
-		address : { 
+		address: { 
 		    type: 'text',
-		    required:true 
+		    required: true 
+		},
+
+		pincode: {
+			type: 'string',
+			required: true
 		},
 
 		blood_group: {
@@ -37,13 +42,21 @@ module.exports = {
 			required: true
 		},
 
-		last_donation_date : { 
+		last_donation_date: { 
 		    type: 'date'
 		},
 
 		contact_list: {
 			collection: 'Contact',
   			via: 'linked_users'
+		},
+
+		lat: {
+			type: 'float'
+		},
+
+		lng: {
+			type: 'float'
 		}
 	}  
 };
