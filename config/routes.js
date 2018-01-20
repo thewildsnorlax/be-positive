@@ -39,7 +39,10 @@ module.exports.routes = {
   'get /test': 'TestController.get',
   'post /user': 'UserController.post',
   'post /user/contacts': 'UserController.updateContactList',
-  'post /user/dummy': 'UserController.dummy'
+  'post /user/dummy': 'UserController.dummy',
+  'post /user/makerequest': 'UserController.makeRequest',
+  'get /request/status': 'UserController.getStatus',
+  'get /notifications': 'SuggestionController.getNotification'
 
   /***************************************************************************
   *                                                                          *
